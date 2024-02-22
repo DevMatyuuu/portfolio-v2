@@ -3,6 +3,33 @@
 @tailwind utilities;
 
 
+
 body{
-    background-color: #F0EAE2;
+    background-color: #f4f1ec;
+}
+.mask {
+    mask-image: url('../src/assets/mask.svg');
+    background: #214062;
+    mask-repeat: no-repeat;
+    mask-size: 40px;
+    color: #F0EAE2;
+    position: absolute;
+}
+.icon-animated {
+    animation-name: tilt-shaking;
+    animation-iteration-count: infinite;
+    animation-duration: 0.2s;
+    
+}
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.animatedtext-char{
+    display: inline-block;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
